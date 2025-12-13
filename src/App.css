@@ -1,0 +1,271 @@
+/* --- Global Styles --- */
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* --- Controls (Start/Stop) --- */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.controls button {
+  font-size: 1.2rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.start-button {
+  background-color: #28a745;
+  color: white;
+}
+.start-button:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.stop-button {
+  background-color: #dc3545;
+  color: white;
+}
+.stop-button:hover:not(:disabled) {
+  background-color: #c82333;
+}
+
+/* --- Status Bar --- */
+.status {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  background-color: #f4f4f4;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+.status span {
+  font-weight: bold;
+}
+
+/* --- NEW: 3-Way Toggle --- */
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.toggle-btn {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #495057;
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn:hover:not(.active) {
+  background-color: #dee2e6;
+}
+
+.toggle-btn.active {
+  background-color: #fff;
+  color: #007bff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Main Content Area --- */
+.main-content {
+  margin-top: 1rem;
+}
+
+/* --- VIEW 1: Mood & Table --- */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+}
+
+.mood-display h2,
+.table-display h2,
+.graph-display h2,
+.lottie-display h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #444;
+}
+
+.mood-box {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 3rem 1rem;
+  border-radius: 10px;
+  background-color: #e9ecef;
+  color: #495057;
+  transition: all 0.3s ease;
+}
+
+/* Dynamic colors based on mood */
+.mood-box.positive {
+  background-color: #d4edda;
+  color: #155724;
+}
+.mood-box.negative {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+.mood-box.neutral {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+.mood-box.analyzing {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.table-display table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-display th,
+.table-display td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.table-display th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+/* --- NEW: VIEW 2: Graph --- */
+.graph-display {
+  width: 100%;
+  padding: 1rem;
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* --- NEW: VIEW 3: Lottie --- */
+.lottie-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+}
+
+.lottie-mood-text {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-transform: capitalize;
+}
+.lottie-iframe {
+  width: 300px;
+  height: 300px;
+  border: none;
+}
+
+/* --- Connection Guide Styles --- */
+.connect-guide {
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  text-align: center;
+  color: #856404;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  animation: pulse-border 2s infinite;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.step span {
+  background: #856404;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.download-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.download-btn:hover {
+  background-color: #0056b3;
+}
+
+.waiting-text {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Blur the app when disconnected */
+.main-interface.blurred {
+  opacity: 0.5;
+  pointer-events: none; /* Prevent clicking start/stop while disconnected */
+  filter: blur(2px);
+  transition: all 0.3s ease;
+}
+
+@keyframes pulse-border {
+  0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 193, 7, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
+}
