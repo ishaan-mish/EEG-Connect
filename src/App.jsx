@@ -53,7 +53,7 @@ const BrainVisual = ({ isActive, currentMood }) => {
 };
 
 // --- CONFIGURATION ---
-const DOWNLOAD_LINK = "https://drive.google.com/file/d/1e2_2ZXsQqEG4T0XnabQu0shKJqgk7ASw/view?usp=sharing";
+const DOWNLOAD_LINK = "https://drive.google.com/file/d/1tGc3_5BkNtKcSppOqPk-0YfAbxhkD1xQ/view?usp=sharing";
 const WEBSOCKET_URL = 'ws://localhost:8000/ws';
 
 const lottieUrls = {
