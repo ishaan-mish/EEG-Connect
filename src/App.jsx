@@ -53,7 +53,7 @@ const BrainVisual = ({ isActive, currentMood }) => {
 };
 
 // --- CONFIGURATION ---
-const DOWNLOAD_LINK = "https://drive.google.com/file/d/1tGc3_5BkNtKcSppOqPk-0YfAbxhkD1xQ/view?usp=sharing";
+const DOWNLOAD_LINK = "https://drive.google.com/file/d/1yzdkvD2xrbEjHHoanN-E_qR9oJ1pZBoJ/view?usp=sharing";
 const WEBSOCKET_URL = 'ws://127.0.0.1:8000/ws'; // Use 127.0.0.1 instead of localhost to be safe
 const lottieUrls = {
   POSITIVE: 'https://lottie.host/embed/89eecf10-004f-49d4-81ad-bb3c058f8215/OjEH4ixGXY.lottie',
